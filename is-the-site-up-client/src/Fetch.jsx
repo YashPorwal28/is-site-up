@@ -25,7 +25,7 @@ const Fetch = () => {
     const fetchdata = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:8080/api/v1/check?url=${formattedUrl}`);
+            const response = await fetch(`/api/v1/check?url=${formattedUrl}`);
             const data = await response.text();
             setDisplay(data);
             console.log(data);
